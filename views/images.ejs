@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Lover</title>
+</head>
+<body>
+    <h1>Add and Display your Favorite Images</h1>
+    <a href="/auth/logout"><button>Logout</button></a>
+    <main>
+        <% for (image of images) { %>
+            <img src= "<%=image.url%>">
+        <% } %>
+        <div>
+            <form id= "form" action="/images" method="POST">
+                <input type="text" placeholder="img url" name="images" />
+                <br><input type="submit" value="Post New Image" />
+            </form>
+        </div>
+    </main>
+</body>
+</html>
